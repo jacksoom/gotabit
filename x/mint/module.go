@@ -18,11 +18,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/gotabit/gotabit/x/mint/client/cli"
-	"github.com/gotabit/gotabit/x/mint/client/rest"
-	"github.com/gotabit/gotabit/x/mint/keeper"
-	"github.com/gotabit/gotabit/x/mint/simulation"
-	"github.com/gotabit/gotabit/x/mint/types"
+	"github.com/jacksoom/gotabit/x/mint/client/cli"
+	"github.com/jacksoom/gotabit/x/mint/client/rest"
+	"github.com/jacksoom/gotabit/x/mint/keeper"
+	"github.com/jacksoom/gotabit/x/mint/simulation"
+	"github.com/jacksoom/gotabit/x/mint/types"
 )
 
 var (

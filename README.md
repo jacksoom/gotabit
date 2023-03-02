@@ -45,7 +45,7 @@ The GotaBit is powered by the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk)
 
 ### From Binary
 
-The easiest way to install is to download a pre-built binary. You can find the latest binaries on the [releases](https://github.com/gotabit/gotabit/releases) page.
+The easiest way to install is to download a pre-built binary. You can find the latest binaries on the [releases](https://github.com/jacksoom/gotabit/releases) page.
 
 ### From Source
 
@@ -80,10 +80,10 @@ Go v1.18+ or higher is required for The GotaBit Node.
 
 **Step 2: Get source code**
 
-Clone the source code from the [official repo](https://github.com/gotabit/gotabit) and check out the `main` branch for the latest stable release.
+Clone the source code from the [official repo](https://github.com/jacksoom/gotabit) and check out the `main` branch for the latest stable release.
 
 ```bash
-git clone https://github.com/gotabit/gotabit
+git clone https://github.com/jacksoom/gotabit
 cd gotabit
 git checkout main
 ```

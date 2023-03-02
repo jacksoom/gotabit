@@ -10,7 +10,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox/types"
 )
 
 var _ types.QueryServer = Keeper{}

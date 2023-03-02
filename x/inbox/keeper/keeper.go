@@ -3,7 +3,7 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox/types"
 	"github.com/tendermint/tendermint/libs/log"
 
 	"github.com/cosmos/cosmos-sdk/codec"

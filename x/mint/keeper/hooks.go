@@ -3,8 +3,8 @@ package keeper
 import (
 	"fmt"
 
-	epochstypes "github.com/gotabit/gotabit/x/epochs/types"
-	"github.com/gotabit/gotabit/x/mint/types"
+	epochstypes "github.com/jacksoom/gotabit/x/epochs/types"
+	"github.com/jacksoom/gotabit/x/mint/types"
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"

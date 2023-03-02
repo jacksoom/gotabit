@@ -18,8 +18,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"github.com/gotabit/gotabit/app"
-	"github.com/gotabit/gotabit/cmd/cosmoscmd"
+	"github.com/jacksoom/gotabit/app"
+	"github.com/jacksoom/gotabit/cmd/cosmoscmd"
 )
 
 type (

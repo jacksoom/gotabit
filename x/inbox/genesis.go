@@ -1,8 +1,8 @@
 package inbox
 
 import (
-	"github.com/gotabit/gotabit/x/inbox/keeper"
-	"github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox/keeper"
+	"github.com/jacksoom/gotabit/x/inbox/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

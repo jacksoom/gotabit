@@ -4,7 +4,7 @@ package gotabit.inbox.v1beta1;
 import "google/api/annotations.proto";
 import "gotabit/inbox/v1beta1/inbox.proto";
 
-option go_package = "github.com/gotabit/gotabit/x/inbox/types";
+option go_package = "github.com/jacksoom/gotabit/x/inbox/types";
 
 // Query creates service with inbox as RPC
 service Query {

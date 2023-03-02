@@ -95,11 +95,11 @@ import (
 	upgradekeeper "github.com/cosmos/cosmos-sdk/x/upgrade/keeper"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/gotabit/gotabit/cmd/cosmoscmd"
+	"github.com/jacksoom/gotabit/cmd/cosmoscmd"
 
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 	// unnamed import of statik for swagger UI support
-	_ "github.com/gotabit/gotabit/client/docs/statik"
+	_ "github.com/jacksoom/gotabit/client/docs/statik"
 
 	"github.com/CosmWasm/wasmd/x/wasm"
 	wasmclient "github.com/CosmWasm/wasmd/x/wasm/client"
@@ -112,17 +112,17 @@ import (
 	icahosttypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/host/types"
 	icatypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/types"
 
-	"github.com/gotabit/gotabit/x/epochs"
-	epochskeeper "github.com/gotabit/gotabit/x/epochs/keeper"
-	epochstypes "github.com/gotabit/gotabit/x/epochs/types"
+	"github.com/jacksoom/gotabit/x/epochs"
+	epochskeeper "github.com/jacksoom/gotabit/x/epochs/keeper"
+	epochstypes "github.com/jacksoom/gotabit/x/epochs/types"
 
-	"github.com/gotabit/gotabit/x/inbox"
-	inboxkeeper "github.com/gotabit/gotabit/x/inbox/keeper"
-	inboxtypes "github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox"
+	inboxkeeper "github.com/jacksoom/gotabit/x/inbox/keeper"
+	inboxtypes "github.com/jacksoom/gotabit/x/inbox/types"
 
-	"github.com/gotabit/gotabit/x/mint"
-	mintkeeper "github.com/gotabit/gotabit/x/mint/keeper"
-	minttypes "github.com/gotabit/gotabit/x/mint/types"
+	"github.com/jacksoom/gotabit/x/mint"
+	mintkeeper "github.com/jacksoom/gotabit/x/mint/keeper"
+	minttypes "github.com/jacksoom/gotabit/x/mint/types"
 )
 
 const (
@@ -298,7 +298,7 @@ type App struct {
 	ScopedTransferKeeper capabilitykeeper.ScopedKeeper
 
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
-	wasmKeeper       wasm.Keeper
+	WasmKeeper       wasm.Keeper
 	scopedWasmKeeper capabilitykeeper.ScopedKeeper
 
 	ICAHostKeeper       icahostkeeper.Keeper
@@ -514,7 +514,7 @@ func NewGotabitApp(
 	// if we want to allow any custom callbacks
 	supportedFeatures := "iterator,staking,stargate"
 	wasmOpts := GetWasmOpts(appOpts)
-	app.wasmKeeper = wasm.NewKeeper(
+	app.WasmKeeper = wasm.NewKeeper(
 		appCodec,
 		keys[wasm.StoreKey],
 		app.GetSubspace(wasm.ModuleName),
@@ -537,7 +537,7 @@ func NewGotabitApp(
 	// register wasm gov proposal types
 	enabledProposals := GetEnabledProposals()
 	if len(enabledProposals) != 0 {
-		govRouter.AddRoute(wasm.RouterKey, wasm.NewWasmProposalHandler(app.wasmKeeper, enabledProposals))
+		govRouter.AddRoute(wasm.RouterKey, wasm.NewWasmProposalHandler(app.WasmKeeper, enabledProposals))
 	}
 
 	// Create Transfer Stack
@@ -553,7 +553,7 @@ func NewGotabitApp(
 
 	// Create fee enabled wasm ibc Stack
 	var wasmStack ibcporttypes.IBCModule
-	wasmStack = wasm.NewIBCHandler(app.wasmKeeper, app.IBCKeeper.ChannelKeeper, app.IBCFeeKeeper)
+	wasmStack = wasm.NewIBCHandler(app.WasmKeeper, app.IBCKeeper.ChannelKeeper, app.IBCFeeKeeper)
 	wasmStack = ibcfee.NewIBCMiddleware(wasmStack, app.IBCFeeKeeper)
 
 	// this line is used by starport scaffolding # ibc/app/router
@@ -602,7 +602,7 @@ func NewGotabitApp(
 		ica.NewAppModule(nil, &app.ICAHostKeeper),
 		ibcfee.NewAppModule(app.IBCFeeKeeper),
 		// this line is used by starport scaffolding # stargate/app/appModule
-		wasm.NewAppModule(appCodec, &app.wasmKeeper, app.StakingKeeper, app.AccountKeeper, app.BankKeeper),
+		wasm.NewAppModule(appCodec, &app.WasmKeeper, app.StakingKeeper, app.AccountKeeper, app.BankKeeper),
 		epochs.NewAppModule(appCodec, *app.EpochsKeeper),
 		inbox.NewAppModule(appCodec, app.InboxKeeper),
 	)
@@ -718,7 +718,7 @@ func NewGotabitApp(
 		transfer.NewAppModule(app.TransferKeeper),
 		ibcfee.NewAppModule(app.IBCFeeKeeper),
 		// this line is used by starport scaffolding # stargate/app/appModule
-		wasm.NewAppModule(appCodec, &app.wasmKeeper, app.StakingKeeper, app.AccountKeeper, app.BankKeeper),
+		wasm.NewAppModule(appCodec, &app.WasmKeeper, app.StakingKeeper, app.AccountKeeper, app.BankKeeper),
 		epochs.NewAppModule(appCodec, *app.EpochsKeeper),
 		inbox.NewAppModule(appCodec, app.InboxKeeper),
 	)
@@ -758,7 +758,7 @@ func NewGotabitApp(
 
 	if manager := app.SnapshotManager(); manager != nil {
 		err = manager.RegisterExtensions(
-			wasmkeeper.NewWasmSnapshotter(app.CommitMultiStore(), &app.wasmKeeper),
+			wasmkeeper.NewWasmSnapshotter(app.CommitMultiStore(), &app.WasmKeeper),
 		)
 		if err != nil {
 			panic("failed to register snapshot extension: " + err.Error())

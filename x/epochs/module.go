@@ -30,10 +30,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"github.com/gotabit/gotabit/x/epochs/client/cli"
-	"github.com/gotabit/gotabit/x/epochs/keeper"
-	"github.com/gotabit/gotabit/x/epochs/types"
-	"github.com/gotabit/gotabit/x/mint/simulation"
+	"github.com/jacksoom/gotabit/x/epochs/client/cli"
+	"github.com/jacksoom/gotabit/x/epochs/keeper"
+	"github.com/jacksoom/gotabit/x/epochs/types"
+	"github.com/jacksoom/gotabit/x/mint/simulation"
 )
 
 var (

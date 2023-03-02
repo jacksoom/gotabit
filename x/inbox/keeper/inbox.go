@@ -4,7 +4,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox/types"
 )
 
 // GetLastMsgId returns last msg id

@@ -3,7 +3,7 @@ package keeper
 import (
 	"context"
 
-	"github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

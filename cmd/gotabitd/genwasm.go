@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gotabit/gotabit/app"
-	"github.com/gotabit/gotabit/cmd/cosmoscmd"
+	"github.com/jacksoom/gotabit/app"
+	"github.com/jacksoom/gotabit/cmd/cosmoscmd"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/client"

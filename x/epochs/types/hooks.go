@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/gotabit/gotabit/utils"
+	"github.com/jacksoom/gotabit/utils"
 )
 
 type EpochHooks interface {

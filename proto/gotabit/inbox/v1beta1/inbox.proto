@@ -3,7 +3,7 @@ package gotabit.inbox.v1beta1;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/gotabit/gotabit/x/inbox/types";
+option go_package = "github.com/jacksoom/gotabit/x/inbox/types";
 option (gogoproto.goproto_getters_all) = false;
 
 // Msg defines the inbox item - msg

@@ -1,7 +1,7 @@
 package keeper_test
 
 import (
-	"github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox/types"
 )
 
 func (suite *KeeperTestSuite) TestLastMsgIdGetSet() {

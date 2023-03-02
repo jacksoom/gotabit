@@ -21,7 +21,7 @@ import (
 
 	store "github.com/cosmos/cosmos-sdk/store/types"
 
-	msgtypes "github.com/gotabit/gotabit/x/inbox/types"
+	msgtypes "github.com/jacksoom/gotabit/x/inbox/types"
 )
 
 // RegisterUpgradeHandlers returns upgrade handlers

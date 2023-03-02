@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmcli "github.com/tendermint/tendermint/libs/cli"
 
-	"github.com/gotabit/gotabit/app"
-	"github.com/gotabit/gotabit/x/mint/client/cli"
+	"github.com/jacksoom/gotabit/app"
+	"github.com/jacksoom/gotabit/x/mint/client/cli"
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"

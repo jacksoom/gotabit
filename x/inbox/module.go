@@ -19,9 +19,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/gotabit/gotabit/x/inbox/client/cli"
-	"github.com/gotabit/gotabit/x/inbox/keeper"
-	"github.com/gotabit/gotabit/x/inbox/types"
+	"github.com/jacksoom/gotabit/x/inbox/client/cli"
+	"github.com/jacksoom/gotabit/x/inbox/keeper"
+	"github.com/jacksoom/gotabit/x/inbox/types"
 )
 
 var (

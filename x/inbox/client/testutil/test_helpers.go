@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	msgcli "github.com/gotabit/gotabit/x/inbox/client/cli"
+	msgcli "github.com/jacksoom/gotabit/x/inbox/client/cli"
 
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 )

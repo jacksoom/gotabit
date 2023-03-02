@@ -1,7 +1,7 @@
 syntax = "proto3";
 package gotabit.inbox.v1beta1;
 
-option go_package = "github.com/gotabit/gotabit/x/inbox/types";
+option go_package = "github.com/jacksoom/gotabit/x/inbox/types";
 
 // EventMsgSend defines the event for MsgSend.
 message EventMsgSend {

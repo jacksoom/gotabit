@@ -9,7 +9,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/gotabit/gotabit/x/epochs/types"
+	"github.com/jacksoom/gotabit/x/epochs/types"
 )
 
 var _ types.QueryServer = Querier{}

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gotabit/gotabit/x/epochs/types"
+	"github.com/jacksoom/gotabit/x/epochs/types"
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"

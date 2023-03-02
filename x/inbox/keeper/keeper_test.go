@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	simapp "github.com/gotabit/gotabit/app"
+	simapp "github.com/jacksoom/gotabit/app"
 )
 
 const (

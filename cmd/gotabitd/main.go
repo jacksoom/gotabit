@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/gotabit/gotabit/app"
-	"github.com/gotabit/gotabit/cmd/cosmoscmd"
+	"github.com/jacksoom/gotabit/app"
+	"github.com/jacksoom/gotabit/cmd/cosmoscmd"
 
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 )

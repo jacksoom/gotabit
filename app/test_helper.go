@@ -3,7 +3,7 @@ package app
 import (
 	"encoding/json"
 
-	"github.com/gotabit/gotabit/cmd/cosmoscmd"
+	"github.com/jacksoom/gotabit/cmd/cosmoscmd"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"

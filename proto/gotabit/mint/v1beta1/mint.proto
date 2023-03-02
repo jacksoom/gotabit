@@ -1,7 +1,7 @@
 syntax = "proto3";
 package gotabit.mint.v1beta1;
 
-option go_package = "github.com/gotabit/gotabit/x/mint/types";
+option go_package = "github.com/jacksoom/gotabit/x/mint/types";
 
 import "gogoproto/gogo.proto";
 
